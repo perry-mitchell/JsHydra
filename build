@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ! -d "output" ]; then
+	mkdir output
+fi
+
+rm -r output/*
+
+dmcs *.cs -out:output/hydra.o -r:System.Web.dll
